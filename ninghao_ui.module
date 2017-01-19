@@ -8,6 +8,13 @@
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
+ * Implements hook_page_attachments_alter().
+ */
+function ninghao_ui_page_attachments_alter(array &$attachments) {
+  dpm($attachments);
+}
+
+/**
  * Implements hook_help().
  */
 function ninghao_ui_help($route_name, RouteMatchInterface $route_match) {
