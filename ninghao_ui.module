@@ -11,8 +11,18 @@ use Drupal\Core\Routing\RouteMatchInterface;
  * Implements hook_page_attachments_alter().
  */
 function ninghao_ui_page_attachments_alter(array &$attachments) {
-  $attachments['#attached']['library'][] = 'ninghao_ui/ui.devel';
+  if (_ninghao_ui_is_access_devel_info()) {
+    $attachments['#attached']['library'][] = 'ninghao_ui/ui.devel';
+  }
   dpm($attachments);
+}
+
+/**
+ * Check if current user has "access devel information" access.
+ */
+function _ninghao_ui_is_access_devel_info() {
+  $user = \Drupal::currentUser();
+  return $user->hasPermission('access devel information');
 }
 
 /**
