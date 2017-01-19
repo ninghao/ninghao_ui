@@ -11,6 +11,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
  * Implements hook_page_attachments_alter().
  */
 function ninghao_ui_page_attachments_alter(array &$attachments) {
+  $attachments['#attached']['library'][] = 'ninghao_ui/ui.devel';
   dpm($attachments);
 }
 

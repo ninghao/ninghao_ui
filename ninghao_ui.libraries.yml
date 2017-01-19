@@ -1,0 +1,5 @@
+ui.devel:
+  version: VERSION
+  css:
+    theme:
+      css/components/devel.css: {}
