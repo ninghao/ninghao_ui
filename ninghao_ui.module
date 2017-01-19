@@ -27,6 +27,16 @@ function ninghao_ui_page_attachments_alter(array &$attachments) {
 }
 
 /**
+ * Implementation of hook_element_info_alter().
+ */
+function ninghao_ui_element_info_alter(array &$info) {
+  dpm($info);
+  if (isset($info['submit'])) {
+    $info['submit']['#attributes']['class'][] = 'ui';
+  }
+}
+
+/**
  * Check if current user has "access devel information" access.
  */
 function _ninghao_ui_is_access_devel_info() {
