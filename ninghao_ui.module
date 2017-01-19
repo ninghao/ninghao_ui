@@ -12,6 +12,16 @@ use \Drupal\Core\Form\FormStateInterface;
  * Implements hook_form_alter().
  */
 function ninghao_ui_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (isset($form['actions']['submit']['#button_type'])) {
+    if ($form['actions']['submit']['#button_type'] === 'primary') {
+      $form['actions']['submit']['#attributes']['class'][] = 'ui primary';
+    }
+  }
+  if (isset($form['actions']['delete']['#button_type'])) {
+    if ($form['actions']['delete']['#button_type'] === 'danger') {
+      $form['actions']['delete']['#attributes']['class'][] = 'ui button negative';
+    }
+  }
   dpm($form);
 }
 
