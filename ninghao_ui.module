@@ -11,6 +11,14 @@ use Drupal\Core\Routing\RouteMatchInterface;
  * Implements hook_page_attachments_alter().
  */
 function ninghao_ui_page_attachments_alter(array &$attachments) {
+  // Remove some meta tags.
+  $meta_tags = array('system_meta_generator');
+  foreach ($attachments['#attached']['html_head'] as $key => $value) {
+    if (in_array($value[1], $meta_tags)) {
+      unset($attachments['#attached']['html_head'][$key]);
+    }
+  }
+
   if (_ninghao_ui_is_access_devel_info()) {
     $attachments['#attached']['library'][] = 'ninghao_ui/ui.devel';
   }
