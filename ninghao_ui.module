@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains ninghao_ui.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ninghao_ui_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ninghao_ui module.
+    case 'help.page.ninghao_ui':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom UI fro back and front.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ninghao_ui_theme() {
+  return [
+    'ninghao_ui' => [
+      'template' => 'ninghao_ui',
+      'render element' => 'children',
+    ],
+  ];
+}

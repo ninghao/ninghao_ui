@@ -1,0 +1,5 @@
+name: Ninghao UI
+type: module
+description: Custom UI fro back and front.
+core: 8.x
+package: Custom
