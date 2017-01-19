@@ -3,3 +3,8 @@ ui.devel:
   css:
     theme:
       css/components/devel.css: {}
+ui.button:
+  version: VERSION
+  css:
+    components:
+      semantic/dist/components/button.css: {}
