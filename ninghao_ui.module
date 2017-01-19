@@ -6,6 +6,14 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use \Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function ninghao_ui_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  dpm($form);
+}
 
 /**
  * Implements hook_page_attachments_alter().
