@@ -9,6 +9,16 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use \Drupal\Core\Form\FormStateInterface;
 
 /**
+ * Implements hook_preprocess_HOOK() for menu-local-action templates.
+ */
+function ninghao_ui_preprocess_menu_local_action(array &$variables) {
+  $variables['link']['#options']['attributes']['class'][] = 'ui';
+  $variables['link']['#options']['attributes']['class'][] = 'basic';
+  $variables['link']['#options']['attributes']['class'][] = 'primary';
+  dpm($variables);
+}
+
+/**
  * Implements hook_form_alter().
  */
 function ninghao_ui_form_alter(&$form, FormStateInterface $form_state, $form_id) {
@@ -22,7 +32,7 @@ function ninghao_ui_form_alter(&$form, FormStateInterface $form_state, $form_id)
       $form['actions']['delete']['#attributes']['class'] = 'ui button negative';
     }
   }
-  dpm($form);
+  // dpm($form);
 }
 
 /**
@@ -48,7 +58,7 @@ function ninghao_ui_page_attachments_alter(array &$attachments) {
  * Implementation of hook_element_info_alter().
  */
 function ninghao_ui_element_info_alter(array &$info) {
-  dpm($info);
+  // dpm($info);
   if (isset($info['submit'])) {
     $info['submit']['#attributes']['class'][] = 'ui';
   }
