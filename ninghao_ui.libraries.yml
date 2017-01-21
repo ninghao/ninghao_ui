@@ -25,3 +25,21 @@ ui.draggable:
   css:
     component:
       css/components/tabledrag.module.css: {}
+ui.transition:
+  version: VERSION
+  css:
+    component:
+      semantic/dist/components/transition.css: {}
+  js:
+    semantic/dist/components/transition.js: {}
+ui.dropdown:
+  version: VERSION
+  css:
+    component:
+      semantic/dist/components/dropdown.css: {}
+  js:
+    semantic/dist/components/dropdown.js: {}
+    js/dropdown.config.js: {}
+  dependencies:
+    - core/jquery
+    - ninghao_ui/ui.transition
