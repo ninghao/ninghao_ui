@@ -43,3 +43,8 @@ ui.dropdown:
   dependencies:
     - core/jquery
     - ninghao_ui/ui.transition
+ui.table:
+  version: VERSION
+  css:
+    component:
+      semantic/dist/components/table.css: {}
