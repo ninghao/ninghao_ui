@@ -18,5 +18,10 @@ ui.devel:
 ui.button:
   version: VERSION
   css:
-    components:
+    component:
       semantic/dist/components/button.css: {}
+ui.draggable:
+  version: VERSION
+  css:
+    component:
+      css/components/tabledrag.module.css: {}
