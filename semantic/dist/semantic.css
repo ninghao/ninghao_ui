@@ -24589,6 +24589,18 @@ Floated Menu / Item
          Site Overrides
 *******************************/
 
+/**
+ * Custom table style by ninghao.net
+ */
+
+.ui.table td.is-active {
+  background-color: #f7fcff;
+}
+
+/**
+ * Table style from seven theme.
+ */
+
 tbody tr:hover,
 tbody tr:focus {
   background: #f7fcff;
@@ -24613,22 +24625,6 @@ tbody tr.color-error:focus {
 th > a {
   position: relative;
   display: block;
-}
-
-/* 1. Must match negative bottom padding of the parent <th> */
-
-th > a:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: -10px;
-  /* 1. */
-  left: 0;
-  right: 0;
-  border-bottom: 2px solid transparent;
-  -webkit-transition: all 0.1s;
-  transition: all 0.1s;
 }
 
 th.is-active > a {

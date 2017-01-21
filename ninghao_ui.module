@@ -9,6 +9,15 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use \Drupal\Core\Form\FormStateInterface;
 
 /**
+ * Implements template_preprocess_views_view_table().
+ */
+function ninghao_ui_preprocess_views_view_table(&$variables) {
+  $variables['attributes']['class'][] = 'ui';
+  $variables['attributes']['class'][] = 'table';
+  $variables['#attached']['library'][] = 'ninghao_ui/ui.table';
+}
+
+/**
  * Implements template_preprocess_table().
  */
 function ninghao_ui_preprocess_table(&$variables) {
