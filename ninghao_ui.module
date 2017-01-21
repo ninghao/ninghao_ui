@@ -15,7 +15,7 @@ function ninghao_ui_preprocess_menu_local_action(array &$variables) {
   $variables['link']['#options']['attributes']['class'][] = 'ui';
   $variables['link']['#options']['attributes']['class'][] = 'basic';
   $variables['link']['#options']['attributes']['class'][] = 'primary';
-  dpm($variables);
+  // dpm($variables);
 }
 
 /**
@@ -39,6 +39,8 @@ function ninghao_ui_form_alter(&$form, FormStateInterface $form_state, $form_id)
  * Implements hook_page_attachments_alter().
  */
 function ninghao_ui_page_attachments_alter(array &$attachments) {
+  $attachments['#attached']['library'][] = 'ninghao_ui/ui.reset';
+  $attachments['#attached']['library'][] = 'ninghao_ui/ui.site';
   $attachments['#attached']['library'][] = 'ninghao_ui/ui.button';
   // Remove some meta tags.
   $meta_tags = array('system_meta_generator');

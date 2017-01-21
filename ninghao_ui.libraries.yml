@@ -1,3 +1,15 @@
+ui.reset:
+  version: VERSION
+  css:
+    base:
+      semantic/dist/components/reset.css: {}
+ui.site:
+  version: VERSION
+  css:
+    theme:
+      semantic/dist/components/site.css: {}
+  js:
+    semantic/dist/components/site.js: {}
 ui.devel:
   version: VERSION
   css:
