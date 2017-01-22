@@ -48,3 +48,8 @@ ui.table:
   css:
     component:
       semantic/dist/components/table.css: {}
+ui.input:
+  version: VERSION
+  css:
+    component:
+      semantic/dist/components/input.css: {}

@@ -122,5 +122,9 @@ function ninghao_ui_theme() {
       'template' => 'ninghao_ui',
       'render element' => 'children',
     ],
+    'input__textfield' => [
+      'template' => 'form/input--textfield',
+      'base hook' => 'input'
+    ]
   ];
 }
