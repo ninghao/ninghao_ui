@@ -2,6 +2,10 @@
          Site Overrides
 *******************************/
 
+input[type="file"] {
+  display: none;
+}
+
 // .ui.input input.form-autocomplete {
 //   background-image: url(../../../images/core/throbber-inactive.png);
 //   background-position: 98% center; /* LTR */

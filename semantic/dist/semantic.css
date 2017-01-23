@@ -12064,6 +12064,10 @@ img.ui.bordered.image {
 /*******************************
          Site Overrides
 *******************************/
+
+input[type="file"] {
+  display: none;
+}
 /*!
  * # Semantic UI 2.2.7 - Label
  * http://github.com/semantic-org/semantic-ui/

@@ -508,3 +508,6 @@
          Site Overrides
 *******************************/
 
+input[type="file"] {
+  display: none;
+}
