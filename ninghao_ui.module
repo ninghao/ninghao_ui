@@ -9,6 +9,14 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use \Drupal\Core\Form\FormStateInterface;
 
 /**
+ * Implements template_preprocess_form_element().
+ */
+function ninghao_ui_preprocess_form_element(&$variables) {
+  $variables['label']['#attributes']['type'] = $variables['type'];
+  // dpm($variables);
+}
+
+/**
  * Implements template_preprocess_views_view_table().
  */
 function ninghao_ui_preprocess_views_view_table(&$variables) {
