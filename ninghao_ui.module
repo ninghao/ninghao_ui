@@ -79,6 +79,9 @@ function ninghao_ui_page_attachments_alter(array &$attachments) {
  */
 function ninghao_ui_element_info_alter(array &$info) {
   // dpm($info);
+  if (isset($info['entity_autocomplete'])) {
+    $info['entity_autocomplete']['#theme'] = 'input__autocomplete';
+  }
   if (isset($info['submit'])) {
     $info['submit']['#attributes']['class'][] = 'ui';
   }
@@ -124,6 +127,10 @@ function ninghao_ui_theme() {
     ],
     'input__textfield' => [
       'template' => 'form/input--textfield',
+      'base hook' => 'input'
+    ],
+    'input__autocomplete' => [
+      'template' => 'form/input--autocomplete',
       'base hook' => 'input'
     ]
   ];
