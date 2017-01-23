@@ -26,6 +26,15 @@ function ninghao_ui_preprocess_views_view_table(&$variables) {
 }
 
 /**
+ * Implements template_preprocess_field_ui_table().
+ */
+function ninghao_ui_preprocess_field_ui_table(&$variables) {
+  $variables['#attached']['library'][] = 'ninghao_ui/ui.table';
+  $variables['attributes']['class'][] = 'ui';
+  $variables['attributes']['class'][] = 'table';  
+}
+
+/**
  * Implements template_preprocess_table().
  */
 function ninghao_ui_preprocess_table(&$variables) {
