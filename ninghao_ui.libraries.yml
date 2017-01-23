@@ -58,3 +58,7 @@ ui.icon:
   css:
     component:
       semantic/dist/components/icon.css: {}
+ui.drupal.autocomplete:
+  version: VERSION
+  js:
+    js/autocomplete.js: {}
