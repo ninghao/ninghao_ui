@@ -2,18 +2,18 @@
          Site Overrides
 *******************************/
 
-.ui.input input.form-autocomplete {
-  background-image: url(../../../images/core/throbber-inactive.png);
-  background-position: 98% center; /* LTR */
-  background-repeat: no-repeat;
-}
-[dir="rtl"] .ui.input input.form-autocomplete {
-  background-position: 0% center;
-}
-.ui.input input.form-autocomplete.ui-autocomplete-loading {
-  background-image: url(../../../images/core/throbber-active.gif);
-  background-position: 98% center; /* LTR */
-}
-[dir="rtl"] input.form-autocomplete.ui-autocomplete-loading {
-  background-position: 0% center;
-}
+// .ui.input input.form-autocomplete {
+//   background-image: url(../../../images/core/throbber-inactive.png);
+//   background-position: 98% center; /* LTR */
+//   background-repeat: no-repeat;
+// }
+// [dir="rtl"] .ui.input input.form-autocomplete {
+//   background-position: 0% center;
+// }
+// .ui.input input.form-autocomplete.ui-autocomplete-loading {
+//   background-image: url(../../../images/core/throbber-active.gif);
+//   background-position: 98% center; /* LTR */
+// }
+// [dir="rtl"] input.form-autocomplete.ui-autocomplete-loading {
+//   background-position: 0% center;
+// }

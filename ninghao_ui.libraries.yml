@@ -53,3 +53,8 @@ ui.input:
   css:
     component:
       semantic/dist/components/input.css: {}
+ui.icon:
+  version: VERSION
+  css:
+    component:
+      semantic/dist/components/icon.css: {}

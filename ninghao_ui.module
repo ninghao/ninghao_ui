@@ -60,6 +60,7 @@ function ninghao_ui_page_attachments_alter(array &$attachments) {
   $attachments['#attached']['library'][] = 'ninghao_ui/ui.reset';
   $attachments['#attached']['library'][] = 'ninghao_ui/ui.site';
   $attachments['#attached']['library'][] = 'ninghao_ui/ui.button';
+  $attachments['#attached']['library'][] = 'ninghao_ui/ui.icon';
   // Remove some meta tags.
   $meta_tags = array('system_meta_generator');
   foreach ($attachments['#attached']['html_head'] as $key => $value) {
