@@ -87,8 +87,22 @@
     if (term.length > 0 && options.firstCharacterBlacklist.indexOf(term[0]) !== -1) {
       return false;
     }
+    // Add custom class to parent element.
+    event.target.parentNode.classList.add('loading');
     // Only search when the term is at least the minimum length.
     return term.length >= options.minLength;
+  }
+
+  /**
+   * The response handler is called after a search completes.
+   *
+   * @function Drupal.autocomplete.options.response
+   *
+   * @param {object} event
+   *   The event triggered.
+   */
+  function responseHandler(event) {
+    event.target.parentNode.classList.remove('loading');
   }
 
   /**
@@ -270,6 +284,7 @@
       source: sourceData,
       focus: focusHandler,
       search: searchHandler,
+      response: responseHandler,
       select: selectHandler,
       renderItem: renderItem,
       minLength: 1,
