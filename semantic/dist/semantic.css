@@ -27188,6 +27188,10 @@ a.ui.card:hover,
 /*******************************
     User Variable Overrides
 *******************************/
+
+.ui.items > .item .ui.input input {
+  width: 100%;
+}
 /*!
  * # Semantic UI 2.2.7 - Statistic
  * http://github.com/semantic-org/semantic-ui/

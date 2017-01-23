@@ -1,3 +1,7 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+.ui.items > .item .ui.input input {
+  width: 100%;
+}

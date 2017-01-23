@@ -62,3 +62,8 @@ ui.drupal.autocomplete:
   version: VERSION
   js:
     js/autocomplete.js: {}
+ui.item:
+  version: VERSION
+  css:
+    component:
+      semantic/dist/components/item.css: {}    
