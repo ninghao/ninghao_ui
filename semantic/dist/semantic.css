@@ -30513,6 +30513,10 @@ select.ui.dropdown {
 /*******************************
         User Overrides
 *******************************/
+
+.ui.selection.dropdown {
+  box-sizing: border-box;
+}
 /*!
  * # Semantic UI 2.2.7 - Video
  * http://github.com/semantic-org/semantic-ui/

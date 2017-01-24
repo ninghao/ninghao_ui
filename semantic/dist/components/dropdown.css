@@ -1415,3 +1415,6 @@ select.ui.dropdown {
         User Overrides
 *******************************/
 
+.ui.selection.dropdown {
+  box-sizing: border-box;
+}
