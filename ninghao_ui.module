@@ -113,6 +113,12 @@ function ninghao_ui_element_info_alter(array &$info) {
     $info['select']['#attributes']['class'][] = 'dropdown';
     $info['select']['#attached']['library'][] = 'ninghao_ui/ui.dropdown';
   }
+  if (isset($info['checkbox'])) {
+    $info['checkbox']['#attached']['library'][] = 'ninghao_ui/ui.checkbox';
+  }
+  if (isset($info['radio'])) {
+    $info['radio']['#attached']['library'][] = 'ninghao_ui/ui.checkbox';
+  }
 }
 
 /**

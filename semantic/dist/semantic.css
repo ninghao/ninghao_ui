@@ -28758,6 +28758,18 @@ a.ui.card:hover,
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.checkbox {
+  box-sizing: border-box;
+}
+
+.ui.radio.checkbox {
+  margin-right: 16px;
+}
+
+.ui.slider.checkbox .description {
+  margin-left: 4.8em;
+}
 /*!
  * # Semantic UI 2.2.7 - Dimmer
  * http://github.com/semantic-org/semantic-ui/

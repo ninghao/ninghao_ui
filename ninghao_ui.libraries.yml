@@ -66,4 +66,15 @@ ui.item:
   version: VERSION
   css:
     component:
-      semantic/dist/components/item.css: {}    
+      semantic/dist/components/item.css: {}
+ui.checkbox:
+  version: VERSION
+  css:
+    component:
+      semantic/dist/components/checkbox.css: {}
+  js:
+    semantic/dist/components/checkbox.js: {}
+    js/checkbox.config.js: {}
+  dependencies:
+    - core/jquery
+    - ninghao_ui/ui.transition

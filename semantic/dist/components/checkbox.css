@@ -623,3 +623,12 @@
          Site Overrides
 *******************************/
 
+.ui.checkbox {
+  box-sizing: border-box;
+}
+.ui.radio.checkbox {
+  margin-right: 16px;
+}
+.ui.slider.checkbox .description {
+  margin-left: 4.8em;
+}
