@@ -178,6 +178,10 @@ function ninghao_ui_theme() {
       'template' => 'ninghao_ui',
       'render element' => 'children',
     ],
+    'input__search' => [
+      'template' => 'form/input--textfield',
+      'base hook' => 'input'
+    ],
     'input__number' => [
       'template' => 'form/input--textfield',
       'base hook' => 'input'
