@@ -1,0 +1,22 @@
+.ninghao-toolbar .toolbar a,
+.ninghao-toolbar .toolbar a:hover,
+.ninghao-toolbar .toolbar a:focus {
+  text-decoration: none;
+}
+.ninghao-toolbar .toolbar-tray a:hover,
+.ninghao-toolbar .toolbar-tray a:active,
+.ninghao-toolbar .toolbar-tray a:focus,
+.ninghao-toolbar .toolbar-tray a.is-active {
+  text-decoration: none;
+}
+.ninghao-toolbar .toolbar .toolbar-bar {
+  box-shadow: none;
+}
+.ninghao-toolbar .toolbar .toolbar-tray-vertical {
+  box-shadow: none;
+  border-color: rgba(34,36,38,.2);
+}
+.ninghao-toolbar .toolbar .toolbar-tray-horizontal {
+  box-shadow: none;
+  border-color: rgba(34,36,38,.2);
+}

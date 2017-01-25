@@ -82,6 +82,9 @@ function ninghao_ui_page_attachments_alter(array &$attachments) {
   $attachments['#attached']['library'][] = 'ninghao_ui/ui.site';
   $attachments['#attached']['library'][] = 'ninghao_ui/ui.button';
   $attachments['#attached']['library'][] = 'ninghao_ui/ui.icon';
+  if (_ninghao_ui_is_access_toolbar()) {
+    $attachments['#attached']['library'][] = 'ninghao_ui/ui.toolbar';
+  }
   // Remove some meta tags.
   $meta_tags = array('system_meta_generator');
   foreach ($attachments['#attached']['html_head'] as $key => $value) {
@@ -133,6 +136,24 @@ function _ninghao_ui_is_access_devel_info() {
 }
 
 /**
+ * Check if current user has "access toolbar" access.
+ */
+function _ninghao_ui_is_access_toolbar() {
+  $user = \Drupal::currentUser();
+  return $user->hasPermission('access toolbar');
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function ninghao_ui_preprocess_html(&$variables) {
+  if (_ninghao_ui_is_access_toolbar()) {
+    $variables['attributes']['class'][] = 'ninghao-toolbar';
+    $variables['attributes']['class'][] = 'ninghao';
+  }
+}
+
+/**
  * Implements hook_help().
  */
 function ninghao_ui_help($route_name, RouteMatchInterface $route_match) {
@@ -156,6 +177,18 @@ function ninghao_ui_theme() {
     'ninghao_ui' => [
       'template' => 'ninghao_ui',
       'render element' => 'children',
+    ],
+    'input__number' => [
+      'template' => 'form/input--textfield',
+      'base hook' => 'input'
+    ],
+    'input__password' => [
+      'template' => 'form/input--textfield',
+      'base hook' => 'input'
+    ],
+    'input__email' => [
+      'template' => 'form/input--textfield',
+      'base hook' => 'input'
     ],
     'input__textfield' => [
       'template' => 'form/input--textfield',

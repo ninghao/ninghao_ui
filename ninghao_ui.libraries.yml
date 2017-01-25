@@ -78,3 +78,8 @@ ui.checkbox:
   dependencies:
     - core/jquery
     - ninghao_ui/ui.transition
+ui.toolbar:
+  version: VERSION
+  css:
+    component:
+      css/components/toolbar.css: {}
