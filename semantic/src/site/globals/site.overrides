@@ -1,3 +1,18 @@
 /*******************************
          Site Overrides
 *******************************/
+details {
+  line-height: 1.295em;
+  border: 1px solid rgba(34,36,38,.1);
+}
+details summary {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+details summary:focus {
+  outline: none;
+}
+details summary:focus,
+details summary:hover {
+  text-decoration: none;
+}
