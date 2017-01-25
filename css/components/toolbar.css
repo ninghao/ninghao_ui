@@ -20,3 +20,11 @@
   box-shadow: none;
   border-color: rgba(34,36,38,.2);
 }
+.ninghao-toolbar .toolbar .toolbar-icon:before {
+  width: 16px;
+}
+@media only screen and (min-width: 36em) {
+  .ninghao-toolbar .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon:before {
+    width: 16px;
+  }
+}
