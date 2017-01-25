@@ -1,3 +1,15 @@
 /*******************************
     User Variable Overrides
 *******************************/
+.ui.blue.cards > .card:hover, .ui.cards > .blue.card:hover, .ui.blue.card:hover {
+  box-shadow: none;
+}
+.ui.red.cards > .card:hover, .ui.cards > .red.card:hover, .ui.red.card:hover {
+  box-shadow: none;
+}
+.ui.cards .red.card {
+  border-bottom: 2px solid @red;
+}
+.ui.cards .blue.card {
+  border-bottom: 2px solid @blue;
+}
