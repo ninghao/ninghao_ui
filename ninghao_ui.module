@@ -119,6 +119,9 @@ function ninghao_ui_element_info_alter(array &$info) {
   if (isset($info['radio'])) {
     $info['radio']['#attached']['library'][] = 'ninghao_ui/ui.checkbox';
   }
+  if (isset($info['dropbutton'])) {
+    $info['dropbutton']['#attached']['library'][] = 'ninghao_ui/ui.button';
+  }
 }
 
 /**

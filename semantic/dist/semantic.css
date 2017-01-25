@@ -4614,6 +4614,113 @@ input::selection {
 /*******************************
          Site Overrides
 *******************************/
+
+/**
+ * Dropbutton
+ */
+
+.js .dropbutton-widget {
+  border-radius: 2px;
+}
+
+.js .form-actions .dropbutton-widget {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: none;
+  border: none;
+  vertical-align: baseline;
+  background: #E0E1E2 none;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin: 0em 0.5em 0em 0em;
+  padding: 0.78571429em 1.5em 0.78571429em;
+  text-transform: none;
+  font-weight: bold;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.28571429rem;
+  box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  will-change: '';
+  -webkit-tap-highlight-color: transparent;
+  background-color: #2185D0;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+}
+
+.js .form-actions .dropbutton-widget .ui.button {
+  background: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #FFFFFF;
+}
+
+.js .form-actions .dropbutton-widget .ui.button:hover {
+  background: none;
+  color: #FFFFFF;
+}
+
+.js .form-actions .dropbutton-widget {
+  box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+
+.js .form-actions .dropbutton-widget .button:hover,
+.js .form-actions .dropbutton-widget:hover {
+  background-color: #1678c2;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+.js .form-actions .dropbutton-widget .button:active,
+.js .form-actions .dropbutton-widget:active {
+  background-color: #1a69a4;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+.js .form-actions .dropbutton-multiple .dropbutton {
+  border-right: 1px solid #1a69a4;
+}
+
+.js .form-actions .dropbutton .secondary-action {
+  border-top: 1px solid #1a69a4;
+}
+
+.js .form-actions .dropbutton-multiple.open .dropbutton .dropbutton-action {
+  padding-bottom: 4px;
+}
+
+.js .form-actions .dropbutton-multiple.open .dropbutton .secondary-action {
+  padding-top: 4px;
+}
+
+.js .form-actions .dropbutton-multiple .dropbutton-toggle {
+  width: 3.1em;
+}
+
+@media screen and (max-width: 600px) {
+  .js .form-actions .dropbutton-widget {
+    width: 100%;
+  }
+
+  .js .form-actions .dropbutton-multiple .dropbutton-toggle {
+    width: 2em;
+  }
+
+  .js .form-actions .ui.button.negative {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
 /*!
  * # Semantic UI 2.2.7 - Container
  * http://github.com/semantic-org/semantic-ui/
