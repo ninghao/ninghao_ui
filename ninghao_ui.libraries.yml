@@ -83,3 +83,8 @@ ui.toolbar:
   css:
     component:
       css/components/toolbar.css: {}
+ui.card:
+  version: VERSION
+  css:
+    component:
+      semantic/dist/components/card.css: {}
