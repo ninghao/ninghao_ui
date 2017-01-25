@@ -3451,8 +3451,12 @@
 /**
  * Dropbutton
  */
-.js .dropbutton-widget {
+.js .dropbutton-wrapper .dropbutton-widget {
   border-radius: 2px;
+  border-color: #2185D0;
+}
+.js .dropbutton-wrapper .dropbutton-widget:hover {
+  border-color: #1678c2;
 }
 .js .form-actions .dropbutton-widget {
   cursor: pointer;

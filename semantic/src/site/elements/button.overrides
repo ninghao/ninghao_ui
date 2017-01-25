@@ -5,8 +5,12 @@
 /**
  * Dropbutton
  */
-.js .dropbutton-widget {
+.js .dropbutton-wrapper .dropbutton-widget {
   border-radius: 2px;
+  border-color: @primaryColor;
+}
+.js .dropbutton-wrapper .dropbutton-widget:hover {
+  border-color: @primaryColorHover;
 }
 .js .form-actions .dropbutton-widget {
   cursor: pointer;
