@@ -8,6 +8,7 @@
 .ninghao-toolbar .toolbar-tray a:focus,
 .ninghao-toolbar .toolbar-tray a.is-active {
   text-decoration: none;
+  background: #f5f5f5;
 }
 .ninghao-toolbar .toolbar .toolbar-bar {
   box-shadow: none;
