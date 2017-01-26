@@ -71,6 +71,13 @@ function ninghao_ui_form_alter(&$form, FormStateInterface $form_state, $form_id)
       $form['actions']['delete']['#attributes']['class'] = 'ui button negative';
     }
   }
+  // site_default_country select element in regional settings form.
+  if (isset($form['locale']['site_default_country'])) {
+    $form['locale']['site_default_country']['#attributes']['class'][] = 'ui';
+    $form['locale']['site_default_country']['#attributes']['class'][] = 'search';
+    $form['locale']['site_default_country']['#attributes']['class'][] = 'dropdown';
+    $form['locale']['site_default_country']['#attached']['library'][] = 'ninghao_ui/ui.dropdown';
+  }
   // dpm($form);
 }
 
