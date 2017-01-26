@@ -66,6 +66,11 @@ function ninghao_ui_form_alter(&$form, FormStateInterface $form_state, $form_id)
       $form['actions']['submit']['#attributes']['class'][] = 'ui primary';
     }
   }
+  // filter button on Webprofiler page.
+  if (isset($form['actions']['filter'])) {
+    $form['actions']['filter']['#attributes']['class'][] = 'ui';
+    $form['actions']['filter']['#attributes']['class'][] = 'primary';
+  }
   if (isset($form['actions']['delete']['#button_type'])) {
     if ($form['actions']['delete']['#button_type'] === 'danger') {
       $form['actions']['delete']['#attributes']['class'] = 'ui button negative';
@@ -78,7 +83,7 @@ function ninghao_ui_form_alter(&$form, FormStateInterface $form_state, $form_id)
     $form['locale']['site_default_country']['#attributes']['class'][] = 'dropdown';
     $form['locale']['site_default_country']['#attached']['library'][] = 'ninghao_ui/ui.dropdown';
   }
-  // dpm($form);
+  dpm($form);
 }
 
 /**
