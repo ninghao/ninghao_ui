@@ -71,6 +71,14 @@ function ninghao_ui_form_alter(&$form, FormStateInterface $form_state, $form_id)
     $form['actions']['filter']['#attributes']['class'][] = 'ui';
     $form['actions']['filter']['#attributes']['class'][] = 'primary';
   }
+  // preview button on views display page.
+  if (isset($form['actions']['button']['#type'])) {
+    if ($form['actions']['button']['#type'] === 'submit') {
+      $form['actions']['button']['#attributes']['class'][] = 'ui';
+      $form['actions']['button']['#attributes']['class'][] = 'basic';
+      $form['actions']['button']['#attributes']['class'][] = 'primary';
+    }
+  }
   if (isset($form['actions']['delete']['#button_type'])) {
     if ($form['actions']['delete']['#button_type'] === 'danger') {
       $form['actions']['delete']['#attributes']['class'] = 'ui button negative';
