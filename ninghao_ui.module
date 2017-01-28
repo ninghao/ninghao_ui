@@ -131,9 +131,9 @@ function ninghao_ui_element_info_alter(array &$info) {
     $info['submit']['#attributes']['class'][] = 'ui';
   }
   if (isset($info['select'])) {
-    $info['select']['#attributes']['class'][] = 'ui';
-    $info['select']['#attributes']['class'][] = 'search';
-    $info['select']['#attributes']['class'][] = 'dropdown';
+    // $info['select']['#attributes']['class'][] = 'ui';
+    // $info['select']['#attributes']['class'][] = 'search';
+    // $info['select']['#attributes']['class'][] = 'dropdown';
     $info['select']['#attached']['library'][] = 'ninghao_ui/ui.dropdown';
   }
   if (isset($info['checkbox'])) {
