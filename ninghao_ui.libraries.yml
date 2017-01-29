@@ -93,3 +93,8 @@ ui.grid:
   css:
     component:
       semantic/dist/components/grid.css: {}
+ui.container:
+  version: VERSION
+  css:
+    component:
+      semantic/dist/components/container.css: {}
