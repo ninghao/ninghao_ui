@@ -88,3 +88,8 @@ ui.card:
   css:
     component:
       semantic/dist/components/card.css: {}
+ui.grid:
+  version: VERSION
+  css:
+    component:
+      semantic/dist/components/grid.css: {}
