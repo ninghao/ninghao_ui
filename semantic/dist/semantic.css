@@ -4634,6 +4634,10 @@ details summary:hover {
          Site Overrides
 *******************************/
 
+.js .ui.button.js-hide {
+  display: none;
+}
+
 /**
  * Dropbutton
  */

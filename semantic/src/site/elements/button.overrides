@@ -1,7 +1,9 @@
 /*******************************
          Site Overrides
 *******************************/
-
+.js .ui.button.js-hide {
+  display: none;
+}
 /**
  * Dropbutton
  */

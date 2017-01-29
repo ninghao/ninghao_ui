@@ -63,25 +63,24 @@ function ninghao_ui_preprocess_menu_local_action(array &$variables) {
 function ninghao_ui_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (isset($form['actions']['submit']['#button_type'])) {
     if ($form['actions']['submit']['#button_type'] === 'primary') {
-      $form['actions']['submit']['#attributes']['class'][] = 'ui primary';
+      $form['actions']['submit']['#attributes']['class'][] = 'primary';
     }
   }
   // filter button on Webprofiler page.
   if (isset($form['actions']['filter'])) {
-    $form['actions']['filter']['#attributes']['class'][] = 'ui';
     $form['actions']['filter']['#attributes']['class'][] = 'primary';
   }
   // preview button on views display page.
   if (isset($form['actions']['button']['#type'])) {
     if ($form['actions']['button']['#type'] === 'submit') {
-      $form['actions']['button']['#attributes']['class'][] = 'ui';
       $form['actions']['button']['#attributes']['class'][] = 'basic';
       $form['actions']['button']['#attributes']['class'][] = 'primary';
     }
   }
   if (isset($form['actions']['delete']['#button_type'])) {
     if ($form['actions']['delete']['#button_type'] === 'danger') {
-      $form['actions']['delete']['#attributes']['class'] = 'ui button negative';
+      $form['actions']['delete']['#attributes']['class'][] = 'ui';
+      $form['actions']['delete']['#attributes']['class'][] = 'negative';
     }
   }
   // site_default_country select element in regional settings form.
@@ -91,7 +90,7 @@ function ninghao_ui_form_alter(&$form, FormStateInterface $form_state, $form_id)
     $form['locale']['site_default_country']['#attributes']['class'][] = 'dropdown';
     $form['locale']['site_default_country']['#attached']['library'][] = 'ninghao_ui/ui.dropdown';
   }
-  // dpm($form);
+  dpm($form);
 }
 
 /**
@@ -128,7 +127,7 @@ function ninghao_ui_element_info_alter(array &$info) {
     $info['entity_autocomplete']['#theme'] = 'input__autocomplete';
   }
   if (isset($info['submit'])) {
-    $info['submit']['#attributes']['class'][] = 'ui';
+    // $info['submit']['#attributes']['class'][] = 'ui';
   }
   if (isset($info['select'])) {
     // $info['select']['#attributes']['class'][] = 'ui';
@@ -197,6 +196,10 @@ function ninghao_ui_theme() {
     'ninghao_ui' => [
       'template' => 'ninghao_ui',
       'render element' => 'children',
+    ],
+    'input__submit' => [
+      'template' => 'form/input--submit',
+      'base hook' => 'input'
     ],
     'input__date' => [
       'template' => 'form/input--textfield',
